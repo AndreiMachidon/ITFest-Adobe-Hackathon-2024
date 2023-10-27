@@ -1,0 +1,20 @@
+/* Custom styles for the navbar */
+.mat-toolbar {
+    background-color: #3f51b5; /* Primary color */
+    color: white; /* Text color */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  /* Style the title */
+  .mat-toolbar span:first-child {
+    margin-left: 16px; /* Add left margin to title */
+  }
+  
+  /* Style the button container */
+  .button-container {
+    display: flex;
+    gap: 16px; /* Adjust the spacing as needed */
+  }
+  
