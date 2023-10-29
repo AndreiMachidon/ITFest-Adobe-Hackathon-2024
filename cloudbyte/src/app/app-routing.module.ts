@@ -4,15 +4,16 @@ import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { HomeComponent } from './home/home.component';
+import { MapComponent } from './map/map.component';
+import { UserListComponent } from './user-list/user-list.component';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent },
-  // { path: 'about', component: AboutComponent },
-  // { path: 'contact', component: ContactComponent },
-  { path: 'login', component: LoginComponent }, // Add this route
-  { path: 'signup', component: SignupComponent }, // Add this route
+  { path: 'home', component: HomeComponent },
+  { path: 'login', component: LoginComponent },
+  { path: '', redirectTo: '/login', pathMatch: 'full' },
+  { path: 'signup', component: SignupComponent },
+  { path: 'details', component: UserListComponent },
 ];
-
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

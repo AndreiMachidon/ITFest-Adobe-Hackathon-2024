@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AngularFirestore } from '@angular/fire/compat/firestore'; 
 
 @Component({
   selector: 'app-signup',
@@ -6,5 +7,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./signup.component.css']
 })
 export class SignupComponent {
-
+  constructor(private firebaseDb: AngularFirestore) {
+    
+  }
 }

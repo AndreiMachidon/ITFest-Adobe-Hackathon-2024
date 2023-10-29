@@ -1,13 +1,69 @@
-<form>
-    <mat-form-field>
-      <input matInput placeholder="Full Name" required>
+<div class="form-wrapper">
+
+  <img class="background-image" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstatic.vecteezy.com%2Fsystem%2Fresources%2Fpreviews%2F000%2F205%2F180%2Foriginal%2Fvector-black-topographic-map-lines-background.jpg&f=1&nofb=1&ipt=a98b88e85bcbb5b371d9ca552fe36f31f691ae2960d72e6041f71aca127cbf0a&ipo=images" alt="">
+
+  <form mat-form class="signup-form">
+    <mat-form-field class="form-field">
+      <mat-label>Full name</mat-label>
+      <input
+        matInput
+        type="text"
+        formControlName="nameFormControl"
+        placeholder="Name"
+        name="name"
+        required
+      />
     </mat-form-field>
-    <mat-form-field>
-      <input matInput placeholder="Email" type="email" required>
+    <br />
+    <mat-form-field class="form-field">
+      <mat-label>Email</mat-label>
+      <input
+        matInput
+        type="email"
+        formControlName="emailFormControl"
+        placeholder="Email"
+        name="email"
+        required
+      />
     </mat-form-field>
-    <mat-form-field>
-      <input matInput type="password" placeholder="Password" required>
+    <br />
+    <mat-form-field class="form-field">
+      <mat-label>Phone number</mat-label>
+      <input
+        matInput
+        type="text"
+        formControlName="phoneFormControl"
+        placeholder="Phone numer"
+        name="number"
+        required
+      />
     </mat-form-field>
-    <button mat-button>Sign Up</button>
-</form>
-  
+    <br />
+    <mat-form-field class="form-field">
+      <mat-label>Password</mat-label>
+      <input
+        matInput
+        type="password"
+        formControlName="passwordFormControl"
+        placeholder="Password"
+        name="password"
+        required
+      />
+    </mat-form-field>
+    <br />
+    <mat-form-field
+      class="form-field"
+      formControlName="typeFormControl"
+      placeholder="Type"
+      required
+    >
+      
+      <mat-select class="form-field">
+        <mat-label>Account type</mat-label>
+        <mat-option value="giver">Giver</mat-option>
+        <mat-option value="receiver">Receiver</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <button mat-button type="submit">Sign Up</button>
+  </form>
+</div>

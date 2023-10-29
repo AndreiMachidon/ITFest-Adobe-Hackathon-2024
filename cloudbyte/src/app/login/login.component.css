@@ -1,0 +1,40 @@
+.form-wrapper{
+    position: relative;
+    z-index: 1;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.background-image{
+    position: relative;
+    z-index: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+}
+
+.login-form{
+    position:absolute;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: whitesmoke;
+    height: 15rem;
+    width: 15rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 2rem;
+}
+
+button:hover{
+    background-color: black;
+    color: white;
+    transition: 0.5s;
+}

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+// import { CalculateXP } from 'src/lib/game';
 
 @Component({
   selector: 'app-home',
@@ -6,5 +7,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
-
+   
 }
+

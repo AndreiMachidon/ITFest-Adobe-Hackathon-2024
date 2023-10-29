@@ -1,11 +1,10 @@
 <mat-toolbar color="primary">
-  <span>My Angular App</span>
-  <span class="spacer"></span>
-  <div class="button-container">
-    <a mat-button routerLink="/">Home</a>
-    <a mat-button routerLink="/about">About</a>
-    <a mat-button routerLink="/contact">Contact</a>
-    <a mat-button routerLink="/login">Login</a>
-    <a mat-button routerLink="/signup">Sign Up</a>
+  <div class="navbar-left">
+    <p class="app-name">ResourceME</p>
+    <p class="company-name">by CloudByte</p>
+  </div>
+  <div class="navbar-right">
+    <button mat-raised-button class="btn-giver" (click)="showDetails()">Giver</button>
   </div>
 </mat-toolbar>
+
