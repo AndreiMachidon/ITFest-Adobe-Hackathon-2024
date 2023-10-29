@@ -1,0 +1,22 @@
+<div class="user-wrapper">
+    <section class="left-section">
+        <img class="user-image" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.caePcVCF5yz5EfJ_MW0t_AHaHa%26pid%3DApi&f=1&ipt=11765bc38e060ccc51b5e6d449b1bc2bba7bfc826b620f4021b3487d3782a2f9&ipo=images" alt="">
+
+        <div *ngIf="+this.userScore < 100; then beginnerBorder else proBorder"></div>
+        
+        <ng-template #beginnerBorder>
+        <img  class="user-border" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fvignette.wikia.nocookie.net%2Fleagueoflegends%2Fimages%2F7%2F70%2FLevel_300_Summoner_Icon_Border.png%2Frevision%2Flatest%2Fscale-to-width-down%2F480%3Fcb%3D20180324105915&f=1&nofb=1&ipt=bdede02df3b0afd413122d196f482d1b95a9905df9e56722345954ff71b6f5b3&ipo=images" alt="">
+        </ng-template>
+
+        <ng-template #proBorder>
+            <img  class="user-border" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.seekpng.com%2Fpng%2Ffull%2F155-1551417_league-of-legends-icon-png.png&f=1&nofb=1&ipt=9b060e16d507abac4a124b7a785ce00fa9e34bf8550d57f410109726cf0ef3cb&ipo=images" alt="">
+        </ng-template>
+    </section>
+    <section class="right-section">
+        <h4 class="username">Name: {{ userName }}</h4>
+        <p class="user-role">Role: {{ userRole }}</p>
+        <p class="user-role">
+            Score: {{ userScore }}
+        </p>
+    </section>
+</div>

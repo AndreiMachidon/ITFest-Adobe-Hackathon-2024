@@ -1,0 +1,35 @@
+
+<div class="form-wrapper">
+
+    <img class="background-image" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstatic.vecteezy.com%2Fsystem%2Fresources%2Fpreviews%2F000%2F205%2F180%2Foriginal%2Fvector-black-topographic-map-lines-background.jpg&f=1&nofb=1&ipt=a98b88e85bcbb5b371d9ca552fe36f31f691ae2960d72e6041f71aca127cbf0a&ipo=images" alt="">
+  <form mat-form class="login-form">
+    
+    <mat-form-field class="form-field" style="width: 100%;">
+      <mat-label>Email</mat-label>
+      <input type="email" matInput formControlName="emailFormControl"
+             placeholder="Ex. pat@example.com" required>
+             <mat-error
+             *ngIf="loginFormGroup.controls['emailFormControl'].hasError('email') && !loginFormGroup.controls['emailFormControl'].hasError('required')">
+             Please enter a valid email address
+         </mat-error>
+         <mat-error *ngIf="loginFormGroup.controls['emailFormControl'].hasError('required')">
+             Email is <strong>required</strong>
+         </mat-error>
+    </mat-form-field>
+  
+    <mat-form-field style="width: 100%;">
+      <mat-label>Password</mat-label>
+      <input matInput [type]="hidePassword ? 'password' : 'text'"
+          formControlName="passwordFormControl">
+      <mat-error *ngIf="loginFormGroup.controls['passwordFormControl'].hasError('required')">
+          Password <strong>required</strong>
+      </mat-error>
+      <button mat-icon-button matSuffix (click)="hidePassword = !hidePassword"
+          [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hidePassword">
+          <mat-icon>{{hidePassword ? 'visibility_off' : 'visibility'}}</mat-icon>
+      </button>
+  </mat-form-field>
+      <button mat-button type="submit" (click)="loginUser()">Login</button>
+    </form>
+  </div>
+    

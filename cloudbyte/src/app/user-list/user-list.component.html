@@ -1,0 +1,26 @@
+<div class="list-wrapper">
+    <button class="back-buton" (click)="goBack()">Inapoi!</button>
+
+    <h1 class="title">All time info</h1>
+    <div class="info-field">
+        <p class="text">Nume: </p>
+        <p class="info">{{ this.giver.name}}</p>
+    </div>
+    <div class="info-field">
+        <p class="text">Email: </p>
+        <p class="info">{{  this.giver.email}}</p>
+    </div>
+    <div class="info-field">
+        <p class="text">Telefon: </p>
+        <p class="info">{{ this.giver.phone}}</p>
+    </div>
+    <div class="info-field">
+        <p class="text">Scor: </p>
+        <p class="info">{{ this.giver.score}}</p>
+    </div>
+    <div class="info-field">
+        <p class="text">Total donatii: </p>
+        <p class="info">{{ this.quantityDonated}}</p>
+    </div>
+
+</div>

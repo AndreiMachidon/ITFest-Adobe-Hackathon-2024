@@ -1,0 +1,45 @@
+ <h2 mat-dialog-title style="margin-left: 10px">Receiver Needs</h2>
+<mat-dialog-content>
+  <mat-table [dataSource]="needsArray" multiTemplateDataRows>
+    <!-- Name Column -->
+    <ng-container matColumnDef="name">
+      <mat-header-cell *matHeaderCellDef> Need </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.key}} </mat-cell>
+    </ng-container>
+
+    <!-- Quantity Column -->
+    <ng-container matColumnDef="quantity">
+      <mat-header-cell *matHeaderCellDef> Quantity </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.value}} </mat-cell>
+    </ng-container>
+
+     <!-- How much would you like to donate? -->
+     <ng-container matColumnDef="chose_donation">
+      <mat-header-cell *matHeaderCellDef> How much would you like to donate?  </mat-header-cell>
+      <mat-cell *matCellDef="let element">
+        <mat-slider   
+        [discrete]="true"
+        [max]="element.value"
+        [min]="1"> 
+        <input matSliderThumb [(ngModel)]="element.sliderValue">
+        </mat-slider>
+      </mat-cell>
+    </ng-container>
+
+    <!-- Donate Button Column -->
+    <ng-container matColumnDef="donate">
+      <mat-header-cell *matHeaderCellDef> Donate </mat-header-cell>
+      <mat-cell *matCellDef="let element">
+        <button mat-raised-button color="primary" (click)="onDonate(element)">Donate</button>
+      </mat-cell>
+    </ng-container>
+
+
+    <mat-header-row *matHeaderRowDef="columnsToDisplay"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: columnsToDisplay;"></mat-row>
+  </mat-table>
+</mat-dialog-content>
+
+<mat-dialog-actions >
+  <button mat-raised-button mat-dialog-close class="close-btn" color="warn" style="margin-left:20px">Close</button>
+</mat-dialog-actions> 
